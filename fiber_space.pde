@@ -6,6 +6,8 @@ int [] direction = new int[quantity];
 int minFlakeSize = 1;
 int maxFlakeSize = 5;
 
+PShape img;
+
 void setup() {
   size(1366, 768);
   frameRate(12);
@@ -18,6 +20,8 @@ void setup() {
     yPosition[i] = random(0, height);
     direction[i] = round(random(0, 1));
   }
+  
+  img = loadShape("fiber.svg");
 }
 
 void draw() {
@@ -38,4 +42,6 @@ void draw() {
       yPosition[i] = -flakeSize[i];
     }
   }
+  
+  shape(img, 260, 290, 850, 175.9083);
 }
