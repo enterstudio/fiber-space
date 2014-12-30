@@ -1,3 +1,7 @@
+//import gifAnimation.*;
+
+//GifMaker gifExport;
+
 int quantity = 500;
 float [] xPosition = new float[quantity];
 float [] yPosition = new float[quantity];
@@ -22,6 +26,10 @@ void setup() {
   }
   
   img = loadShape("fiber.svg");
+  
+//  frameRate(12);
+//  gifExport = new GifMaker(this, "fiber.gif");
+//  gifExport.setRepeat(0);
 }
 
 void draw() {
@@ -44,4 +52,10 @@ void draw() {
   }
   
   shape(img, 260, 290, 850, 175.9083);
+  
+//  gifExport.setDelay(1);
+//  gifExport.addFrame();
+//  if (frameCount == 120) {
+//    gifExport.finish();
+//  }
 }
